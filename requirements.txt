@@ -1,0 +1,6 @@
+Pillow>=10.0
+
+# Optional — only needed for `upload` (YouTube Data API v3):
+# google-api-python-client
+# google-auth-oauthlib
+# google-auth-httplib2

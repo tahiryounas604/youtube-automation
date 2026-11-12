@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-automation"
+version = "0.1.0"
+description = "Faceless YouTube channel pipeline: script, voiceover, ffmpeg video, thumbnails, SEO, upload, scheduling."
+license = { text = "GPL-3.0" }
+requires-python = ">=3.10"
+dependencies = ["Pillow>=10.0"]
+
+[project.optional-dependencies]
+upload = [
+    "google-api-python-client",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+]
+
+[project.scripts]
+youtube-automation = "youtube_automation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
